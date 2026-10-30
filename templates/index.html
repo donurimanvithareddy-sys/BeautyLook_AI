@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BeautyLook AI | Your Personal Beauty Studio</title>
+
+    <meta
+        name="description"
+        content="Explore personalized hairstyle, makeup, saree and mehendi recommendations with BeautyLook AI."
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+        defer
+    ></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        BeautyLook <span class="logo-ai">AI</span>
+    </a>
+
+    <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Beauty Studio</a>
+        <a href="#analyzer">Face Analysis</a>
+    </nav>
+
+    <a href="#analyzer" class="nav-button">
+        Get Started ↗
+    </a>
+
+</header>
+
+
+<main>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ✨ YOUR PERSONAL BEAUTY STUDIO
+            </div>
+
+            <h1>
+                Discover the beauty
+                <br>
+                <span>that feels like you.</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore hairstyles, makeup, traditional saree
+                draping and beautiful mehendi designs with
+                personalized style recommendations.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#analyzer" class="primary-button">
+                    Start Your Beauty Journey →
+                </a>
+
+                <a href="#services" class="secondary-button">
+                    Explore Styles
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+                ♡ Free to explore · No paid AI API required
+            </div>
+
+        </div>
+
+        <div class="hero-art">
+
+            <div class="hero-circle"></div>
+
+            <div class="hero-decoration decoration-one">
+                ✿
+            </div>
+
+            <div class="hero-decoration decoration-two">
+                ✨
+            </div>
+
+            <div class="hero-art-card">
+
+                <div class="hero-art-top">
+                    <span>YOUR BEAUTY</span>
+                    <span>✦ 01</span>
+                </div>
+
+                <div class="hero-art-symbol">
+                    ♡
+                </div>
+
+                <h2>
+                    Your style.<br>
+                    Your story.
+                </h2>
+
+                <p>
+                    A little inspiration for your next look.
+                </p>
+
+                <div class="hero-art-bottom">
+                    <span>BEAUTYLOOK AI</span>
+                    <span>EST. 2026</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services section" id="services">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="eyebrow">EXPLORE YOUR STYLE</div>
+
+                <h2>
+                    Your beauty, your way.
+                </h2>
+            </div>
+
+            <p>
+                Choose your favorite category and discover
+                styles curated around your preferences.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <button
+                class="category-card category-hairstyle"
+                type="button"
+                data-category="Hairstyle"
+            >
+
+                <span class="category-icon">♧</span>
+
+                <span class="category-number">01 / HAIR</span>
+
+                <h3>Hairstyle</h3>
+
+                <p>
+                    Waves, braids, buns and more.
+                </p>
+
+                <span class="category-link">
+                    Explore styles ↗
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card category-makeup"
+                type="button"
+                data-category="Makeup"
+            >
+
+                <span class="category-icon">✿</span>
+
+                <span class="category-number">02 / MAKEUP</span>
+
+                <h3>Makeup</h3>
+
+                <p>
+                    Natural, party and bridal looks.
+                </p>
+
+                <span class="category-link">
+                    Explore styles ↗
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card category-saree"
+                type="button"
+                data-category="Saree"
+            >
+
+                <span class="category-icon">❀</span>
+
+                <span class="category-number">03 / DRAPING</span>
+
+                <h3>Saree Draping</h3>
+
+                <p>
+                    Traditional and modern drapes.
+                </p>
+
+                <span class="category-link">
+                    Explore styles ↗
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card category-mehendi"
+                type="button"
+                data-category="Mehendi"
+            >
+
+                <span class="category-icon">❋</span>
+
+                <span class="category-number">04 / MEHENDI</span>
+
+                <h3>Mehendi</h3>
+
+                <p>
+                    Arabic, bridal and minimal designs.
+                </p>
+
+                <span class="category-link">
+                    Explore styles ↗
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACE ANALYZER -->
+
+    <section class="analyzer-section section" id="analyzer">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="eyebrow">
+                    YOUR PERSONALIZED EXPERIENCE
+                </div>
+
+                <h2>
+                    Let's find your style.
+                </h2>
+            </div>
+
+            <p>
+                Upload a clear photo or capture one with
+                your camera to begin face detection.
+            </p>
+
+        </div>
+
+
+        <div class="analyzer-grid">
+
+            <!-- UPLOAD PANEL -->
+
+            <div class="upload-panel">
+
+                <div class="panel-heading">
+
+                    <span class="step-number">01</span>
+
+                    <div>
+                        <h3>Your photo</h3>
+
+                        <p>
+                            Use a clear, front-facing photograph.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <label for="photoInput" class="upload-dropzone">
+
+                    <span class="upload-icon">↑</span>
+
+                    <strong>Choose a photo</strong>
+
+                    <span>
+                        Click to browse JPG, PNG or WEBP
+                    </span>
+
+                    <span class="upload-limit">
+                        Maximum size: 10 MB
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden
+                >
+
+
+                <div class="camera-controls">
+
+                    <button
+                        type="button"
+                        class="secondary-button full-button"
+                        id="openCamera"
+                    >
+                        📷 Use Camera
+                    </button>
+
+                </div>
+
+
+                <div id="cameraPanel" class="camera-panel hidden">
+
+                    <video
+                        id="cameraVideo"
+                        autoplay
+                        playsinline
+                    ></video>
+
+                    <div class="camera-controls">
+
+                        <button
+                            type="button"
+                            id="capturePhoto"
+                            class="primary-button"
+                        >
+                            Capture Photo
+                        </button>
+
+                        <button
+                            type="button"
+                            id="closeCamera"
+                            class="secondary-button"
+                        >
+                            Close Camera
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <canvas id="cameraCanvas" hidden></canvas>
+
+
+                <div id="previewPanel" class="preview-panel hidden">
+
+                    <img
+                        id="photoPreview"
+                        alt="Selected photo preview"
+                    >
+
+                    <button
+                        type="button"
+                        id="removePhoto"
+                        class="remove-photo"
+                    >
+                        Remove photo
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="analyzeButton"
+                    class="primary-button analyze-button"
+                    disabled
+                >
+                    Analyze My Face →
+                </button>
+
+
+                <p class="privacy-note">
+                    🔒 Your photo is used for face detection
+                    and is not used to generate an image.
+                </p>
+
+            </div>
+
+
+            <!-- ANALYSIS PANEL -->
+
+            <div class="analysis-panel">
+
+                <div class="panel-heading">
+
+                    <span class="step-number">02</span>
+
+                    <div>
+                        <h3>Your analysis</h3>
+
+                        <p>
+                            Your detection result appears here.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="analysisPlaceholder" class="analysis-placeholder">
+
+                    <div class="placeholder-symbol">✧</div>
+
+                    <h3>Your beauty profile awaits</h3>
+
+                    <p>
+                        Upload a photo and select
+                        “Analyze My Face” to get started.
+                    </p>
+
+                </div>
+
+
+                <div id="analysisResult" class="analysis-result hidden">
+
+                    <div class="success-badge">
+                        ✓ Face detected
+                    </div>
+
+                    <div class="face-shape-display">
+
+                        <span class="face-shape-label">
+                            Estimated face shape
+                        </span>
+
+                        <h2 id="faceShapeResult">
+                            —
+                        </h2>
+
+                    </div>
+
+                    <p id="analysisMessage"></p>
+
+                    <div class="analysis-disclaimer">
+                        Face shape is estimated from the detected
+                        face box and may be inaccurate. You can
+                        also choose styles based on your own
+                        preferences.
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="statusMessage"
+                    class="status-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECOMMENDATIONS -->
+
+    <section class="recommendations-section section" id="recommendations">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="eyebrow">
+                    YOUR STYLE COLLECTION
+                </div>
+
+                <h2 id="recommendationHeading">
+                    Find your next favorite.
+                </h2>
+            </div>
+
+            <p id="recommendationDescription">
+                Analyze your face and select a beauty category
+                to explore recommendations.
+            </p>
+
+        </div>
+
+
+        <div class="recommendation-toolbar">
+
+            <div class="category-tabs">
+
+                <button
+                    class="category-tab active"
+                    data-category="Hairstyle"
+                    type="button"
+                >
+                    Hairstyle
+                </button>
+
+                <button
+                    class="category-tab"
+                    data-category="Makeup"
+                    type="button"
+                >
+                    Makeup
+                </button>
+
+                <button
+                    class="category-tab"
+                    data-category="Saree"
+                    type="button"
+                >
+                    Saree
+                </button>
+
+                <button
+                    class="category-tab"
+                    data-category="Mehendi"
+                    type="button"
+                >
+                    Mehendi
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="recommendationGrid"
+            class="recommendation-grid"
+        >
+
+            <div class="empty-recommendations">
+
+                <span>✿</span>
+
+                <h3>Your recommendations will appear here</h3>
+
+                <p>
+                    Upload and analyze a photo first.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-section section">
+
+        <div class="eyebrow">SIMPLE. PERSONAL. BEAUTIFUL.</div>
+
+        <h2>
+            Your journey in three steps.
+        </h2>
+
+        <div class="how-grid">
+
+            <article class="how-card">
+                <span>01</span>
+                <h3>Upload</h3>
+                <p>
+                    Choose a photo or capture one using your camera.
+                </p>
+            </article>
+
+            <article class="how-card">
+                <span>02</span>
+                <h3>Analyze</h3>
+                <p>
+                    Detect your face and receive a rough face-shape
+                    estimate.
+                </p>
+            </article>
+
+            <article class="how-card">
+                <span>03</span>
+                <h3>Explore</h3>
+                <p>
+                    Discover hairstyle, makeup, saree and
+                    mehendi inspiration.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        BeautyLook <span class="logo-ai">AI</span>
+    </a>
+
+    <p>
+        Beauty begins with expressing yourself.
+    </p>
+
+    <span>
+        © 2026 BeautyLook AI
+    </span>
+
+</footer>
+
+</body>
+</html>
